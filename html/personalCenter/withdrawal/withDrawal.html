@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>提款</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+</head>
+<body>
+<header id="withdrawalHeader" >
+    <a onclick="goBack.myLottery();" class="icon_back" ></a>
+    <h1>提款</h1>
+</header>
+<div class="content">
+    <div class="walletTop">
+       <p class="whitetext"> <span id="withdrawalUser"></span>，您好！ </p>
+       <p class="whitetext"> 余额：<span id="walletMoneyId"></span> </p>
+    </div>
+    <p class="whitetext" style="color:#FF9e00;padding:3px 10px;"><img src="./././images/tips.png" style="width: 20px;height: 20px;margin:-2px 3px 2px 0;"/>提款银行为默认卡，如需更改，请在银行卡管理中修改.</p>
+    <div style="margin-top: 10px;">
+        &nbsp;&nbsp;开户银行：<span id="userBankWithdraw"></span>
+        <p style="padding: 1px;"></p>
+        &nbsp;&nbsp;银行卡号：<span id="userBankNoWithdraw"></span>
+        <p style="padding: 1px;"></p>
+        <!--<p class="whitetext">真实姓名：</p>
+        <input type="text"  id="realUserNameWithdrawId"  onkeyup="return realNameNoSpaceWdraw(this,value)" onblur="return realNameNoSpaceWdraw(this,value)" value=""/>-->
+        <p class="whitetext">提款金额：(范围为<span id="drawMinMoney"></span>-<span id="drawMaxMoney"></span>元)</p>
+        <input type="text"  id="withdrawalMoneyWithdrawId" onkeyup="return ValidateNumber(this,value)" value=""/>
+        <p class="whitetext">资金密码：</p>
+        <input type="password" name="withdrawalPasswdId" id="withdrawalPasswdId" value="" />
+
+        <a class="loginBtn"  id="withdrawalSubmitId">提款</a>
+    </div>
+    <div class="walletTop">
+        温馨提示：
+        <br />
+        <p>取款到账时间为1-5分钟内，取款时间为：<span id="drawBeginTime"></span><span id="drawEndTime"></span></p>
+    </div>
+</div>
+</body>
+</html>

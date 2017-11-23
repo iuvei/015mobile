@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>登录</title>
+</head>
+<body>
+	<header id="loginPageHeader" >
+		<h1>请登录</h1>
+        <a href="#" id="kefuID_login" style="right:0.4em" class="kefu"></a>
+	</header>
+
+    <div class="loginHead">
+        <img src="././images/loginHead.png" alt="Logo">
+    </div>
+
+	<div id="loginInput" class="loginInput">
+            <p>
+                <input type="text" id="username" placeholder="用户名" style="width:100%;padding: 10px;"/>
+            </p>
+            <p style="margin-bottom:0">
+                <input type='password' id="passwd" placeholder="密码"/>
+            </p>
+
+            <p style="margin-top:10px;margin-right: 6px">
+                <input type='text' id="validateCode" placeholder="请输入红色大字验证码" style="height:40px;float: left;width: 65%;"/>
+                <img style="float: right;width: 30%;height: 40px;" id="myCode" onclick="showCode()"/>
+            </p>
+
+            <p id="IsShowGoogleCode" style="display: none">
+                <input type="text" id="GoogleCode" style="margin-top:14px;margin-bottom: -25px;" placeholder="请输入GA动态密码">
+            </p>
+
+            <a class="loginBtn" id="loginbtn" style="margin-top:80px;">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+
+            <p style="text-align: right;padding:10px 20px;"><a style="color:#FF9E00;margin-right: 20px;" onclick="createInitPanel_Fun('lineTest')">线路检测</a><a style="color:#FF9E00" onclick="createInitPanel_Fun('RetrievePwd')">忘记密码？</a></p>
+	</div>
+</body>
+</html>

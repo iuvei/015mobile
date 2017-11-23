@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<!--header头部-->
+<header id="proxyChargeHeader">
+    <a onclick="setPanelBackPage_Fun('subordinateManage');" class="icon_back" ></a>
+    <h1 >下级充值</h1>
+</header>
+
+<!--content部分-->
+    <div class="content">  
+
+		<div class="recordDetail">
+			下级账号：<span id="welcomeUser_dl">--</span>
+			<br />
+			您的彩票余额：<span id="lotteryMoney_dl">--</span>
+		</div>    
+		
+		<div>
+			<p>
+				<p class="whitetext">给下级金额:(<span class="redtext">充值范围1-50000 元</span>)</p>
+			<input type="text" name="payMoney" id="payMoneyID"  maxlength="8" onkeyup="return ValidateNumberSub(this,value)"  value="" placeholder="请输入充值金额" required />
+			</p>
+			<p>
+				<p class="whitetext">
+					资金密码:
+				</p>
+				<input type="password" name="password" id="passwordID" value="" placeholder="请输入密码" required />
+			</p>
+	        <p for="baizhuID" class="whitetext">备注:</p>
+			<select id="baizhuID" data-theme="a" onchange="beizhuType()">
+
+			</select>	
+			<p style="display: none" id="beizhuxinxiID">
+				<input type="text" name="beizhu" id="beizhuId_"  value="" placeholder="请输入备注信息" required />
+			</p>								
+		</div>	
+		<a  class="loginBtn" id="proxyChargesubmit">确定</a>
+    </div>
+</body>
+</html>

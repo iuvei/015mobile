@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+</head>
+<body>
+<header id="transferHeader" >
+    <a onclick="goBack.myLottery();" class="icon_back" ></a>
+    <h1>转账</h1>
+</header>
+<div class="content">
+    <div class="walletTop">
+       <p class="whitetext"> 彩票余额：<span id="lotteryBalance"></span></p>
+       <p class="whitetext"> 棋牌余额：<span id="gameBalance"></span></p>
+    </div>
+
+    <div class="content" style="position: relative;">
+        <p class="whitetext">资金转向：</p>
+        <select name="fundTransfer" id="fundTransfer" onchange="changeTransferType();">
+            <option value="1">彩票 --> 棋牌</option>
+            <option value="2">棋牌 --> 彩票</option>
+        </select>
+        <br>
+        <p class="whitetext">转账金额：</p>
+        <input style="width: 68%" type="text" name="transferMoney" id="transferMoney" value="" placeholder="请输入金额" onkeyup="return ValidateNumberTwoDecimal(this,value)" onblur="return ValidateNumberTwoDecimal(this,value)"/><a onclick="inputAllMoney()" class="loginBtn" style="width: 25%;display: inline-block;margin:0 0 0 10px;height: 36px; line-height: 36px;font-size: 16px;position: relative;top:3px;">全部</a>
+        <br>
+        <p class="whitetext">资金密码:</p>
+        <input type="password" id="fundPassword" maxlength="16" value="" placeholder="请输入密码" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')"/>
+
+        <a class="loginBtn" id="transferSubmit">确定</a>
+    </div>
+
+</div>
+</body>
+</html>

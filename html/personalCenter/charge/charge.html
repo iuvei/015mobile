@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>充值</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+</head>
+<body>
+<header id="chargeHeader" >
+    <a onclick="goBack.myLottery();" class="icon_back" ></a>
+    <h1>充值</h1>
+</header>
+<div class="content" style="padding-bottom:1rem">
+    <div id="welcome">
+        <span id="welcomeUser">--</span>,您好
+        <br />
+        账户余额：<span id="lotteryMoney">--</span>
+    </div>
+    <div class="remind" style="margin-top: 10px;margin-bottom: 20px;" >
+        <dl  id="tonghangzz" >
+        </dl>
+    </div>
+    <div style="margin-top: 10px;margin-bottom: 20px;" id="tonghangID">
+        <p class="whitetext" id="textID">充值金额(重要提示：范围为10-50000元)</p>
+        <p style="color:#dc5b5b; padding:3px 10px;" id="show_charge_tip"></p>
+        <input type="text" name="payMoney" id="tonghangpayMoney" value="" placeholder="请输入充值金额" onkeyup="return ValidateNumber12(this,value)"/>
+        <a class="loginBtn"  id="tonghangsubmit" >确定</a>
+    </div>
+</div>
+</body>
+</html>

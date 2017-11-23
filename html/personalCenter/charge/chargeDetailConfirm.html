@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta  charset="UTF-8"/>
+    <title>充值详情</title>
+</head>
+<body>
+    <header id="chargeDetailConfirmHeader" >
+        <a  onclick="setPanelBackPage_Fun('charge');" class="icon_back"></a>
+        <h1 id="titleID">充值详情</h1>
+    </header>
+   <div class="content" style="padding-bottom: 16px;">
+        <div class="walletTop" style="border:none">
+
+            <ul id="chargeInfo1" class="charge-detail">
+                <p style="border-bottom: 1px dashed #cccccc;text-align: center;padding: 3px 0;font-weight:500;">提示：长按 或 双击，可选中需复制的内容.</p>
+                <li>
+                    <span>收  款  人 ： </span>
+                    <input type="text" id="cashUser" readonly="readonly">
+                </li>
+                <li>
+                    <span>收款银行：</span>
+                    <input type="text" id="cashBank" readonly="readonly">
+                </li>
+                <li id="showKaiHuBank">
+                    <span>开户银行：</span><input type="text" id="kaiHuBank" readonly="readonly">
+                </li>
+                <li>
+                    <span>收款卡号：</span>
+                    <input type="text" id="cashBankNo" readonly="readonly">
+                </li>
+                <li id="khdz">
+                    <span>开户地址：</span>
+                    <input type="text" id="yhkhdz" readonly="readonly">
+                </li>
+                <li>
+                    <span>充值金额：</span><input type="text" id="cash" readonly="readonly">
+                </li>
+                <li id="fuyanID" style="display: none;">
+                    <span>附 言 ： </span><input type="text" id="fuyan" readonly="readonly">
+                </li>
+            </ul>
+            <ul id="chargeInfo2">
+                <li>
+                    充值方式：<span id="payMethod"></span>
+                </li>
+                <li>
+                    充值金额：<span id="payValue"></span>
+                </li>
+            </ul>
+        </div>
+        <a  class="loginBtn"  id="changeSubmit">立即付款</a>
+
+        <div class="note" id="shuomingID" style="display: none;">
+            <h3>充值说明：</h3>
+            <ul>
+                <li>
+                    1、为了保证充值能及时到账请先转账成功后再提交充值订单。<a style="color:#FF9e00" onclick="createInitPanel_Fun('alipayHelp', true);" >【支付宝充值流程演示】</a>
+                </li>
+                <li>
+                    2、本系统支持支付宝、网银、手机银行、跨行转账。
+                </li>
+                <li>
+                    3、我司收款卡可能会随时进行更换，每次充值时需从充值页面重新获取，不能通过历史交易记录中所保留的卡号转账，如果转错卡号，损失由客户自行承担。
+                </li>
+                <li>
+                    4、正常转账成功后 <b>1-3分钟内</b> 资金将会自动到账(遇银行延迟除外)。超时未到请联系客服咨询。
+                </li>
+            </ul>
+        </div>
+
+       <!--打款信息-->
+       <div id="remitInfo" class="remitInfo">
+           <p style="colro:red;text-align: center;">完成转账后，请填写下面的打款信息并提交</p>
+           <p>真实姓名：<span>请填写持卡人姓名</span>	</p>
+               <input type="text" id="remitName">
+           <p>转账金额：<span>与转账金额需一致，否则影响上分</span></p>
+           <input type="number" id="remitMoney" readonly>
+           <p>转账时间：<span> 例如：20点12分请填写2012</span>	</p>
+           <input type="number" id="remitTime" maxlength="4" onkeyup="this.value=this.value.replace(/\D/g,'')">
+           <a class="loginBtn" id="remitSubmit" style="display: none;">已转账，提交平台审核</a>
+       </div>
+
+    </div>
+</body>
+</html>

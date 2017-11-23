@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <header id="contractManageHeader" >
+        <a onclick="goBack.myLottery();" class="icon_back"></a>
+        <h1>契约管理</h1>
+    </header>
+
+    <div>
+        <div id="showMyDailywages" style="margin:12px 0 8px 0;"><b style="margin-left: 15px;">· 日工资</b><a class="contractManageBtn" style="width: 50%" onclick="createInitPanel_Fun('MyDailyWagesContractThree')">我的契约</a>
+            <div class="myLotteryList">
+                <ul>
+                   <!-- <li>
+                        <a onclick="createInitPanel_Fun('MyDailyWagesContract')">我的日工资契约<span class="btnRight"></span></a>
+                    </li>-->
+                    <li>
+                        <a onclick="createInitPanel_Fun('dailyWagesContractThree')">日工资契约<span class="btnRight"></span></a>
+                    </li>
+                    <li>
+                        <a onclick="createInitPanel_Fun('dailyWagesRecordsThree')">日工资记录<span class="btnRight"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="showMyContract" style="margin:10px 0 12px 0;"><b style="margin-left: 15px;">· 分红</b><a class="contractManageBtn" style="width: 50%;margin-left:45px;" onclick="createInitPanel_Fun('MyfenHongContract')">我的契约</a>
+            <div class="myLotteryList">
+                <ul>
+                    <!--<li>
+                        <a onclick="createInitPanel_Fun('MyfenHongContract')">我的分红契约<span class="btnRight"></span></a>
+                    </li>-->
+                    <li>
+                        <a onclick="createInitPanel_Fun('fenHongContract')">分红契约<span class="btnRight"></span></a>
+                    </li>
+                    <li>
+                        <a onclick="createInitPanel_Fun('fenHongRecords')">分红记录<span class="btnRight"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
